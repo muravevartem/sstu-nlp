@@ -5,19 +5,17 @@ import java.util.Map;
 import java.util.Scanner;
 
 /**
- * Частоты слов
+ * Частоты букв
  */
 public class Task1 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
         System.out.println("Введите строку:");
-        String str = scanner.nextLine();
+        String str = new Scanner(System.in).nextLine();
 
         Map<Character, Integer> frequency = getCharFrequency(str);
 
         System.out.println("Частота символов:");
-        for (Map.Entry<Character, Integer> entry : frequency.entrySet()) {
+        for (var entry : frequency.entrySet()) {
             System.out.println(entry.getKey() + " : " + entry.getValue());
         }
     }
@@ -27,9 +25,10 @@ public class Task1 {
             return Map.of();
         }
 
-        Map<Character, Integer> map = new HashMap<>();
+        var map = new HashMap<Character, Integer>();
         for (char c : str.toCharArray()) {
-            map.put(c, map.getOrDefault(c, 0) + 1);
+            char lower = Character.toLowerCase(c);
+            map.put(lower, map.getOrDefault(lower, 0) + 1);
         }
         return map;
     }
