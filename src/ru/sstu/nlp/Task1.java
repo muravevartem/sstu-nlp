@@ -4,6 +4,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
+/**
+ * Частоты слов
+ */
 public class Task1 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
