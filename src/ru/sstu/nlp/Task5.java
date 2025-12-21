@@ -15,8 +15,6 @@ public class Task5 {
         int[][] closure = detectTransitiveClosure(graph);
         System.out.println("Выявленные транзитивные замыкания:");
         print(closure);
-
-
     }
 
     private static int[][] detectTransitiveClosure(int[][] matrix) {
