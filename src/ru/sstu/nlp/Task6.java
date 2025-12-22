@@ -44,8 +44,6 @@ public class Task6 {
     }
 
     enum State {
-        START,
-        CALCULATING,
-        END,
+        START, CALCULATING, END,
     }
 }
